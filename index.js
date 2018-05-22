@@ -8,6 +8,7 @@ document.getElementById("submit").addEventListener("click", ajax);
 
 function ajax(){
   var searchTerm = document.getElementById("search").value;
+  $("#display-results").append("<h2>Results for:" + searchTerm + "</h2>");
     $.getJSON('https://en.wikipedia.org/w/api.php?action=opensearch&callback=?&suggest=true&search=' + searchTerm, function(json){
       for (i=0; i<=json[0].length; i++){
         $("#results").append(
