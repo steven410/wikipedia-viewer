@@ -6,21 +6,22 @@
 </head>
 <body>
 <div id="main">
-<div id="random-search">
-  <a href="https://en.wikipedia.org/wiki/Special:Random">Random article</a>
-</div>
+
 <div id="custom-search">
-  <h3>Search:</h3>
-  <form id="search-form">
-  <input id="search" type="text" name="name"> 
-  <button id="submit" type="button" name="submit" >Submit!</button>
+  <form id="search-form" onsubmit="event.preventDefault(); ajax()">
+  <input id="search" type="text" name="name" placeholder="Search Wikipedia"> 
+  <button id="submit" type="submit" name="submit">Submit!</button>
   </form>
 </div>
+<div id="random-search">
+  <button><a href="https://en.wikipedia.org/wiki/Special:Random">Random Article</a></button>
+</div>
+</div> <!-- end main -->
 <div id="display-results">
   <div id="results">      
   </div>
 </div>
-</div> <!-- end main -->
+
 <script
   src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
